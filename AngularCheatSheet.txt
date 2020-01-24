@@ -1,0 +1,41 @@
+//Angular Cheat Sheet 
+1.ng new project_name //creates all the required files and git init
+2.ng serve  // to be run inside new project , will create and start the server on mentioned local host id.
+3.package.json //contains all the dependencies 
+4.Type Script //Strongly typed , typescript does not run on browser , it 
+5.angular.json // We can add our own style
+6.main.ts -> app.module.ts -> app.component( bootstrap )
+7.Components to build parts of webpages
+8.Modules to bond components
+9.After creating components we need to declare it with module file.
+10.ng generate components component-name //Cli shortcut to create component file
+11.Every Component needs to have a template or templateURL 
+12.Selectors work similar to css selectors 
+13.Databinding - String Interpolation {{}} , Property Binding , Event Binding , Two way binding 
+14.String Interpolation : Any expression can be used within {{}} but it has to return string. Elements have to be declared in the class.
+15.Property Binding : [property]="" can be used to change property of html tag dynamically.
+16.Event Binding: (event)="" can be used to call methods on events.
+17.$event should be passed  from the template to access html field properties.
+18.2 way Binding: [(Directive)]="" , this will change both side value. 
+19.*ngIf does not load the content which is not same as hiding the content.
+20.ng-template #someName creates local reference and can be used with other directive.
+21. [ngStyle]="{css}" directive used to change style dynamically , property of ngStyle has same as ngStyle.
+22.	[ngClass] = "{className: true/false }" same as ngStyle
+23.*ngFor="let server of servers" will iterate over servers array 
+24.We can use property and event binding on Directives too.
+25.@Input('aliasName') is used to bind custom properties between components , it exposes it to outside parent.
+26.@Output('aliasName') is used to emit to parent property .
+27.new EventEmitter<typename>(); to create new events 
+28. .emit(data) to emit the created event to parent.
+29.Angular encapsulates css on its own. - Shadow Dom
+30. encapsulation: ViewEncapsulation.None   //none or emulated(default) or native(shadow dom) // will stop encapsulation css and css will be applied globally
+31. #localreference can be used within template only and can be used to access html elements value.
+32. @viewChild('') will help us get direct reference to the element.
+31.  <ng-content> </ng-content> will substitute the component template with parent template content placed within the <app-component>...
+32. Life cycle hooks - ngOnInit,ngOnChange etc..
+33. Element Ref is used as angular elements property.
+34. Attribute Directive - changes the property 
+35. Structural Directive - changes the structure adds or destroy.
+36. We cant have more than 1 structural directive on an element.
+37. We can create are own Directive by using @Directive and we need to use ElementRef to change the structure.
+38. We should use rendered as if the dom is not there 
